@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="theme-color" content="#0a1524">
-  <meta name="description" content="AML & KYC Scanner — персональный Telegram-инструмент для AML-новостей, мониторинга регуляторных публикаций, проверки открытых медиаисточников и профилей компаний.">
+  <meta name="description" content="AML & KYC Scanner — персональный Telegram-инструмент для AML-новостей, мониторинга регуляторных публикаций, Adverse Media Screening ЮЛ, ИП и ФЛ, а также профилей компаний.">
   <title>AML & KYC Scanner — Intelligence in one place</title>
   <style>
     :root{--bg:#081422;--bg2:#101f31;--surface:#112438;--border:#294054;--text:#f1f7fa;--muted:#a6bac9;--mint:#62ddc7;--gold:#e7c27b;--sky:#8abded;--radius:20px}
@@ -61,7 +61,7 @@
 <body>
   <header class="nav"><div class="container nav-inner">
     <a class="brand" href="#top" aria-label="AML & KYC Scanner, в начало"><span class="brand-symbol">✧</span> AML <span style="color:var(--mint)">&amp;</span> KYC Scanner</a>
-    <nav class="nav-links" aria-label="Разделы сайта"><a href="#capabilities">Возможности</a><a href="#workflow">Как работает</a><a href="#technology">Технологии</a><a href="#principles">Принципы</a></nav>
+    <nav class="nav-links" aria-label="Разделы сайта"><a href="#capabilities">Возможности</a><a href="#screening">Скрининг</a><a href="#workflow">Как работает</a><a href="#technology">Технологии</a><a href="#principles">Принципы</a></nav>
     <span class="nav-tag">PERSONAL R&amp;D PROJECT</span>
   </div></header>
   <main>
@@ -69,9 +69,9 @@
       <div>
         <span class="eyebrow"><span class="dot"></span> AML INTELLIGENCE · TELEGRAM</span>
         <h1>Важное —<br><span class="gradient">в поле зрения.</span></h1>
-        <p class="hero-desc">Новости ПОД/ФТ, регуляторные изменения, регистрационные сведения о компаниях и сигналы из открытых медиаисточников — в едином Telegram-инструменте.</p>
+        <p class="hero-desc">Новости ПОД/ФТ, регуляторные изменения, сведения о компаниях и <strong>Adverse Media Screening ЮЛ, ИП и ФЛ</strong> — в едином Telegram-инструменте.</p>
         <div class="actions"><a class="btn btn-primary" href="#capabilities">Изучить возможности <span aria-hidden="true">↗</span></a><a class="btn btn-secondary" href="#workflow">Как это работает ↓</a></div>
-        <div class="hero-meta"><span>Четыре модуля</span><span>Открытые источники</span><span>Human-in-the-loop</span></div>
+        <div class="hero-meta"><span>Четыре модуля</span><span>Скрининг ЮЛ · ИП · ФЛ</span><span>Human-in-the-loop</span></div>
       </div>
       <div class="display" aria-label="Иллюстративный макет интерфейса Telegram">
         <div class="display-head"><span class="lights"><i></i><i></i><i></i></span><span>TELEGRAM · COMPANY PROFILE</span><span>⋯</span></div>
@@ -99,20 +99,41 @@
       <div class="kicker">ПЛАТФОРМА · 4 МОДУЛЯ</div><h2>От информационного шума<br>к структурированным сигналам.</h2>
       <p class="section-lead">Каждый модуль решает отдельную задачу. Вместе они формируют основу для более эффективной работы с открытой информацией в AML и KYC.</p>
       <div class="features">
-        <article class="feature"><span class="feature-label">01 / Мониторинг информации</span><div class="feature-icon">◉</div><h3>AML Daily Digest</h3><p>Утренний обзор новых публикаций из тематических разделов Росфинмониторинга, Банка России, ЕАГ и FATF. Архив, исключение дубликатов и ручное обновление.</p><div class="tags"><span>09:00 МСК</span><span>4 источника</span><span>Telegram</span></div></article>
+        <article class="feature"><span class="feature-label">01 / Мониторинг информации</span><div class="feature-icon">◉</div><h3>AML Daily Digest</h3><p>Утренний обзор публикаций Росфинмониторинга, Банка России, ЕАГ и FATF. <strong>Daily Digest 2.0:</strong> фильтр свежести за 7 календарных дней, архив, устранение дубликатов и компактные ссылки на источники.</p><div class="tags"><span>09:00 МСК</span><span>4 источника</span><span>7-дневная свежесть</span></div></article>
         <article class="feature"><span class="feature-label">02 / Регуляторное наблюдение</span><div class="feature-icon" style="color:var(--gold)">⚖</div><h3>Regulation Watch</h3><p>Предварительное выявление публикаций, связанных с изменениями 115-ФЗ, 499-П и 794-П. История обнаружений и оповещения о новых кандидатах на изменения.</p><div class="tags"><span>115-ФЗ</span><span>499-П</span><span>794-П</span><span>09:15 МСК</span></div></article>
-        <article class="feature"><span class="feature-label">03 / Проверка открытых публикаций <span class="beta"> · BETA</span></span><div class="feature-icon" style="color:var(--sky)">⌕</div><h3>Adverse Media Scanner</h3><p>Поиск публикаций о юридических лицах, предварительная оценка контекста и релевантности, группировка похожих сюжетов и удобная навигация по находкам.</p><div class="tags"><span>Google News RSS</span><span>Контекст и роли</span><span>False positive</span></div></article>
+        <article class="feature"><span class="feature-label">03 / Проверка открытых публикаций <span class="beta"> · BETA</span></span><div class="feature-icon" style="color:var(--sky)">⌕</div><h3>Adverse Media Scanner</h3><p><strong>Два режима:</strong> поиск ЮЛ по ИНН и названию; поиск <strong>ИП и ФЛ по ФИО</strong>. Предварительное сопоставление имён, оценка AML-тематики, группировка похожих сюжетов и ссылки на публикации. Поиск ФЛ/ИП — экспериментальная beta.</p><div class="tags"><span>ЮЛ · ИП · ФЛ</span><span>Google News RSS</span><span>Поиск по ФИО</span></div></article>
         <article class="feature"><span class="feature-label">04 / Регистрационный профиль <span class="beta"> · BETA</span></span><div class="feature-icon">▤</div><h3>Company Profile 2.0</h3><p>Поиск компаний через DaData по названию или ИНН. Реквизиты, руководство, ОКВЭД, дополнительные поля, информационные KYC-индикаторы и переход к Media Screening.</p><div class="tags"><span>DaData</span><span>Юридические лица</span><span>KYC Indicators</span></div></article>
       </div>
     </div></section>
 
+    <section class="section how" id="screening"><div class="container">
+      <div class="kicker">ADVERSE MEDIA / 2 SEARCH MODES</div>
+      <h2>Скрининг не только компаний.<br>Теперь — ИП и физических лиц.</h2>
+      <p class="section-lead">Поиск негативных и иных потенциально значимых публикаций в открытых медиаисточниках. Два независимых сценария с общим отчётом, группировкой сюжетов и переходом к первоисточникам.</p>
+      <div class="features">
+        <article class="feature">
+          <span class="feature-label">🏢 01 / LEGAL ENTITY SCREENING</span>
+          <div class="feature-icon">▤</div><h3>Поиск ЮЛ</h3>
+          <p>Ввод <strong>ИНН + названия</strong> или запуск из Company Profile. Поиск Google News RSS, предварительное сопоставление организаций и AML-приоритизация сюжетов.</p>
+          <div class="tags"><span>10-значный ИНН</span><span>Название ЮЛ</span><span>Entity Matching</span></div>
+        </article>
+        <article class="feature">
+          <span class="feature-label">👤 02 / PERSON &amp; SOLE PROPRIETOR SCREENING · BETA</span>
+          <div class="feature-icon">⌕</div><h3>Поиск ИП и ФЛ</h3>
+          <p>Ввод <strong>Фамилия Имя Отчество</strong> или <strong>ИП Фамилия Имя Отчество</strong>. Поиск по полному ФИО, сочетанию имени и фамилии и распространённым падежным формам; разделение более точных и возможных совпадений.</p>
+          <div class="tags"><span>ФИО</span><span>Имя + фамилия</span><span>Падежные формы</span></div>
+        </article>
+      </div>
+      <p class="tech-caveat">⚠️ Поиск ФЛ/ИП не подтверждает личность, статус ИП или причастность к событию. Однофамильцы и ложные совпадения возможны. Проверка ЕГРИП, паспортных и других идентификаторов не выполняется. Обработка данных клиентов банка в этом внешнем контуре не разрешена.</p>
+    </div></section>
+
     <section class="section how" id="workflow"><div class="container">
-      <div class="kicker">COMPANY INTELLIGENCE</div><h2>Один запрос. Связанные инструменты.</h2><p class="section-lead">Пример сценария в закрытой beta-версии для публичной компании.</p>
+      <div class="kicker">COMPANY INTELLIGENCE</div><h2>Один запрос. Связанные инструменты.</h2><p class="section-lead">Сценарий для публичной компании через DaData. Для ФЛ и ИП доступен отдельный поиск публикаций по ФИО — без регистрационной карточки и проверки личности.</p>
       <div class="steps">
         <div class="step"><div class="step-num">01 — SEARCH</div><h3>Название или ИНН</h3><p>Найти организацию и выбрать нужное юридическое лицо среди совпадений.</p></div>
         <div class="step"><div class="step-num">02 — PROFILE</div><h3>Карточка компании</h3><p>Получить структурированные регистрационные данные из DaData.</p></div>
         <div class="step"><div class="step-num">03 — SCREEN</div><h3>Adverse Media</h3><p>Запустить поиск потенциально значимых публикаций по названию компании.</p></div>
-        <div class="step"><div class="step-num">04 — REVIEW</div><h3>Экспертная оценка</h3><p>Проверить первоисточники, идентичность ЮЛ, роль и актуальность события.</p></div>
+        <div class="step"><div class="step-num">04 — REVIEW</div><h3>Экспертная оценка</h3><p>Проверить первоисточники, идентичность ЮЛ или человека, роль и актуальность события.</p></div>
       </div>
     </div></section>
 
@@ -120,7 +141,7 @@
     <section class="section technology" id="technology"><div class="container">
       <div class="kicker">TECHNOLOGY / SYSTEM DESIGN</div>
       <h2>Технологии, которые<br>работают на результат.</h2>
-      <p class="section-lead">Асинхронный Python-сервис объединяет Telegram-интерфейс, мониторинг открытых источников и проверки компаний. Простая архитектура без лишней инфраструктуры.</p>
+      <p class="section-lead">Асинхронный Python-сервис объединяет Telegram-интерфейс, мониторинг открытых источников, карточки компаний и Adverse Media Screening ЮЛ, ИП и ФЛ.</p>
       <div class="tech-tags" aria-label="Технологический стек">
         <span>Python 3</span><span>aiogram</span><span>httpx</span><span>BeautifulSoup</span><span>feedparser</span><span>SQLite</span><span>APScheduler</span><span>DaData API</span><span>systemd</span>
       </div>
@@ -131,17 +152,17 @@
           <p class="tech-intro">Два контура: регулярный мониторинг и поиск информации по запросу.</p>
           <div class="tech-inputs">
             <div class="tech-node"><small>MONITORING</small><b>Росфинмониторинг · Банк России · ЕАГ · FATF</b><p>Новости, документы, страницы и RSS</p></div>
-            <div class="tech-node"><small>ON-DEMAND LOOKUP</small><b>DaData API · Google News RSS</b><p>Профили юридических лиц и медиаисточники</p></div>
+            <div class="tech-node"><small>ON-DEMAND LOOKUP</small><b>DaData API · Google News RSS</b><p>Профили ЮЛ и поиск публикаций по названиям / ФИО</p></div>
           </div>
           <div class="tech-arrow-pair" aria-hidden="true"><span>↓</span><span>↓</span></div>
           <div class="tech-processing">
             <div class="tech-node"><small>COLLECTION</small><b>Парсинг и фильтрация</b><p>httpx · BeautifulSoup · feedparser · ключевые слова</p></div>
-            <div class="tech-node"><small>ENTITY PROCESSING</small><b>Карточка и сюжеты</b><p>Сопоставление названий · классификация по правилам · группировка</p></div>
+            <div class="tech-node"><small>ENTITY PROCESSING</small><b>Карточка и сюжеты</b><p>Сопоставление названий и ФИО · эвристики · группировка</p></div>
           </div>
           <div class="tech-arrow-pair" aria-hidden="true"><span>↓</span><span>↓</span></div>
           <div class="tech-stores">
             <div class="tech-node"><small>PERSISTENT DATA</small><b>SQLite</b><p>Архив новостей и события Regulation Watch в отдельных базах</p></div>
-            <div class="tech-node"><small>TEMPORARY STATE</small><b>FSM / оперативная память</b><p>Выбор ЮЛ, навигация и результаты текущего запроса</p></div>
+            <div class="tech-node"><small>TEMPORARY STATE</small><b>FSM / оперативная память</b><p>Выбор ЮЛ / поиск ФИО, навигация и временные результаты</p></div>
           </div>
           <div class="tech-arrow-center" aria-hidden="true">↓</div>
           <div class="tech-end"><div class="tech-end-icon" aria-hidden="true">◇</div><div><b>Telegram Bot API · aiogram</b><p>Дайджесты, уведомления, карточки и интерактивные результаты</p></div></div>
@@ -155,21 +176,21 @@
             <div class="tech-layer"><span class="tech-layer-icon" aria-hidden="true">↗</span><div><b>httpx · BeautifulSoup · feedparser</b><p>HTTPS-запросы, извлечение HTML-данных и чтение RSS. truststore — проверка TLS.</p></div></div>
             <div class="tech-layer"><span class="tech-layer-icon" aria-hidden="true">▤</span><div><b>SQLite</b><p>Локальное хранение публикаций, дедупликация, история регуляторных событий.</p></div></div>
             <div class="tech-layer"><span class="tech-layer-icon" aria-hidden="true">◷</span><div><b>APScheduler · pytz</b><p>Автоматические проверки по Москве: AML Daily Digest в 09:00 и Regulation Watch в 09:15.</p></div></div>
-            <div class="tech-layer"><span class="tech-layer-icon" aria-hidden="true">⌕</span><div><b>DaData REST API · Google News RSS</b><p>Поиск публичных ЮЛ, справочник ОКВЭД 2 и предварительное исследование публикаций.</p></div></div>
+            <div class="tech-layer"><span class="tech-layer-icon" aria-hidden="true">⌕</span><div><b>DaData REST API · Google News RSS</b><p>DaData — профили ЮЛ и ОКВЭД 2; Google News RSS — предварительный поиск публикаций о ЮЛ, ИП и ФЛ.</p></div></div>
             <div class="tech-layer"><span class="tech-layer-icon" aria-hidden="true">⛨</span><div><b>Linux VPS · systemd · GitHub</b><p>Постоянная работа Python-процесса под systemd, контроль обновлений через Git.</p></div></div>
           </div>
         </div>
       </div>
       <div class="tech-guardrails">
         <div class="tech-guardrail"><b>⏱ Автоматически и по запросу</b><p>Плановые рассылки дополняются ручными запусками проверок и просмотров.</p></div>
-        <div class="tech-guardrail"><b>🔎 Объяснимая обработка</b><p>Поиск и первичная классификация используют правила и эвристики, а не автономное AI-решение.</p></div>
-        <div class="tech-guardrail"><b>🔐 Закрытая beta</b><p>Company Profile и Adverse Media пока тестируются владельцем и не предназначены для обработки банковских клиентских данных.</p></div>
+        <div class="tech-guardrail"><b>🔎 Объяснимая обработка</b><p>Поиск по названиям и ФИО, тематическая оценка и группировка используют правила и эвристики; совпадения не подтверждают личность и не являются AI-решением.</p></div>
+        <div class="tech-guardrail"><b>🔐 Закрытая beta</b><p>Company Profile (только ЮЛ) и Adverse Media (ЮЛ, ИП, ФЛ) тестируются владельцем; ввод банковских клиентских данных не допускается.</p></div>
       </div>
       <p class="tech-caveat">Архитектура показана на концептуальном уровне. Публичный сайт не предоставляет доступ к исходному коду, внутренней инфраструктуре или API-ключам.</p>
     </div></section>
 
     <section class="section" id="principles"><div class="container deep-grid">
-      <div><div class="kicker">ПРИНЦИПЫ РАЗРАБОТКИ</div><h2>Быстрый поиск.<br>Взвешенные выводы.</h2><p class="section-lead">Алгоритмы помогают аналитикам ориентироваться в информации, но не должны принимать юридические или комплаенс-решения за человека.</p><div class="timeline"><div class="item"><b>Сначала источник</b><p>Отображаем происхождение данных и дату их актуальности.</p></div><div class="item"><b>Затем идентификация</b><p>Не путаем общую торговую марку с конкретным юридическим лицом.</p></div><div class="item"><b>После — оценка эксперта</b><p>Новость и ключевые слова сами по себе не подтверждают нарушение.</p></div></div></div>
+      <div><div class="kicker">ПРИНЦИПЫ РАЗРАБОТКИ</div><h2>Быстрый поиск.<br>Взвешенные выводы.</h2><p class="section-lead">Алгоритмы помогают аналитикам ориентироваться в информации, но не должны принимать юридические или комплаенс-решения за человека.</p><div class="timeline"><div class="item"><b>Сначала источник</b><p>Отображаем происхождение данных и дату их актуальности.</p></div><div class="item"><b>Затем идентификация</b><p>Различаем бренд и конкретное ЮЛ; совпадение имени и фамилии не доказывает идентичность ФЛ/ИП.</p></div><div class="item"><b>После — оценка эксперта</b><p>Новость и ключевые слова сами по себе не подтверждают нарушение.</p></div></div></div>
       <div class="deep-list">
         <div class="deep-item"><div class="sym">01</div><div><b>Проверяемая информация</b><p>Используем открытые источники; там, где требуется, оставляем ссылки для самостоятельной проверки.</p></div></div>
         <div class="deep-item"><div class="sym">02</div><div><b>Прозрачные ограничения</b><p>Пробелы источников и неоднозначные совпадения обозначаем явно, не выдавая их за подтверждённые факты.</p></div></div>
@@ -177,7 +198,7 @@
         <div class="deep-item"><div class="sym">04</div><div><b>Постепенное развитие</b><p>Ручное тестирование, улучшение качества Entity Resolution и аккуратное подключение новых источников.</p></div></div>
       </div>
     </div></section>
-    <section class="section" style="padding-top:0"><div class="container"><div class="quote"><div><div class="kicker">О ПРОЕКТЕ</div><h3>Интеллектуальная автоматизация начинается не с принятия решений, а с качественно собранной информации.</h3><p>AML &amp; KYC Scanner — независимый персональный R&amp;D-проект. Публичная страница носит презентационный характер: здесь нельзя проводить проверки. Работа с данными реальных банковских клиентов во внешних сервисах требует отдельных согласований. Сведения из медиа и агрегаторов не являются доказательством нарушений.</p></div><div class="quote-logo" aria-hidden="true">✧</div></div></div></section>
+    <section class="section" style="padding-top:0"><div class="container"><div class="quote"><div><div class="kicker">О ПРОЕКТЕ</div><h3>Интеллектуальная автоматизация начинается не с принятия решений, а с качественно собранной информации.</h3><p>AML &amp; KYC Scanner — независимый персональный R&amp;D-проект. Публичная страница носит презентационный характер: здесь нельзя проводить проверки. Работа с данными реальных банковских клиентов во внешних сервисах требует отдельных согласований. Совпадение по ФИО не подтверждает личность, статус ИП или причастность к событию; сведения из медиа и агрегаторов не являются доказательством нарушений.</p></div><div class="quote-logo" aria-hidden="true">✧</div></div></div></section>
   </main>
   <footer><div class="container footer-inner"><span>© AML &amp; KYC Scanner · Personal R&amp;D · 2026</span><span>Python · Telegram · DaData · Open Sources</span><a href="#top">Наверх ↑</a></div></footer>
 </body>
