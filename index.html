@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="theme-color" content="#0a1524">
-  <meta name="description" content="AML & KYC Scanner — персональный Telegram-инструмент для AML-новостей, мониторинга регуляторных публикаций, Adverse Media Screening ЮЛ, ИП и ФЛ, а также профилей компаний.">
+  <meta name="description" content="AML & KYC Scanner — Telegram-инструмент для AML-новостей, регуляторного мониторинга, Adverse Media Screening ЮЛ, ИП и ФЛ, профилей компаний и доказательного анализа публичных заголовков с AI Intelligence Analyst.">
   <title>AML & KYC Scanner — Intelligence in one place</title>
   <style>
     :root{--bg:#081422;--bg2:#101f31;--surface:#112438;--border:#294054;--text:#f1f7fa;--muted:#a6bac9;--mint:#62ddc7;--gold:#e7c27b;--sky:#8abded;--radius:20px}
@@ -65,6 +65,35 @@
     .screens-dialog img{display:block;max-height:78vh;max-width:100%;height:auto;width:auto;object-fit:contain;margin:auto;border-radius:12px}
     .screens-dialog .screen-dialog-title{font-size:13px;text-align:center;margin:11px 0 0;color:#cde1eb}
     .screens-dialog button{position:absolute;right:12px;top:9px;background:#2b4357;color:#fff;border:1px solid #557187;border-radius:9px;padding:5px 11px;cursor:pointer;font-size:18px}
+
+    /* AI Intelligence Analyst: consistent dark editorial card language */
+    .ai-intelligence{background:radial-gradient(ellipse at 80% 18%,#164f5947,transparent 57%),#0b1928;border-top:1px solid #ffffff16;border-bottom:1px solid #ffffff16}
+    .ai-layout{display:grid;grid-template-columns:.88fr 1.12fr;gap:32px;align-items:start}
+    .ai-overline{display:inline-flex;gap:9px;align-items:center;font-size:11px;font-weight:800;letter-spacing:.11em;color:var(--mint);padding:8px 12px;border-radius:99px;border:1px solid #62ddc74b;background:#62ddc710}
+    .ai-intelligence h2{margin-top:20px}
+    .ai-value{display:grid;gap:12px;margin:25px 0 22px}
+    .ai-value-item{display:grid;grid-template-columns:39px 1fr;gap:13px;align-items:start;background:#ffffff05;border:1px solid #355166;border-radius:14px;padding:15px}
+    .ai-value-icon{width:39px;height:39px;display:grid;place-items:center;background:#62ddc712;border-radius:11px;font-size:19px}
+    .ai-value-item strong{display:block;font-size:14px;margin:0 0 3px}
+    .ai-value-item p{color:var(--muted);font-size:12px;margin:0}
+    .ai-meta{display:flex;flex-wrap:wrap;gap:8px}
+    .ai-meta span{font-size:11px;color:#cbe8e4;background:#62ddc70a;border:1px solid #4c7c744f;border-radius:7px;padding:6px 10px}
+    .ai-preview{border:1px solid #3c6373;background:linear-gradient(155deg,#152c42,#0c1a2b);border-radius:22px;padding:22px;box-shadow:0 24px 75px #0004}
+    .ai-preview-top{display:flex;justify-content:space-between;align-items:center;gap:15px;border-bottom:1px solid #ffffff17;padding-bottom:15px}
+    .ai-preview-brand{font-size:14px;font-weight:800}
+    .ai-preview-sub{display:block;font-size:11px;color:var(--muted);font-weight:400;margin-top:4px}
+    .ai-preview-state{white-space:nowrap;font-size:10px;color:var(--mint);border:1px solid #62ddc75e;background:#62ddc710;padding:6px 9px;border-radius:30px}
+    .ai-report{margin-top:16px;border:1px solid #2b465b;border-radius:15px;background:#0b1b2d;padding:18px}
+    .ai-report-head{display:flex;justify-content:space-between;align-items:center;color:#a7c7d2;font-size:10px;font-weight:800;letter-spacing:.12em}
+    .ai-report h3{font-size:17px;line-height:1.35;margin:12px 0}
+    .ai-report-row{font-size:12px;line-height:1.6;color:#d8e7eb;margin:9px 0}
+    .ai-report-row b{color:var(--mint);font-size:11px;letter-spacing:.035em}
+    .ai-quote{padding:13px 14px;border-left:2px solid var(--mint);border-radius:0 9px 9px 0;background:#62ddc70a;margin:13px 0;font-size:13px;color:#e1f4f1}
+    .ai-guard{border:1px solid #e7c27b45;background:#e7c27b0b;border-radius:10px;padding:11px 13px;color:#eddcb9;font-size:12px;margin-top:13px}
+    .ai-report-link{display:inline-flex;align-items:center;gap:6px;color:var(--sky);font-weight:750;font-size:12px;margin-top:14px}
+    .ai-preview-note{margin:13px 2px 0;color:var(--muted);font-size:11px;line-height:1.55}
+    @media(max-width:950px){.ai-layout{grid-template-columns:1fr}.ai-preview{max-width:680px}}
+    @media(max-width:530px){.ai-preview{padding:14px}.ai-report{padding:15px}.ai-preview-top{align-items:flex-start}.ai-report-head{gap:10px}}
     @media(max-width:950px){.screens-gallery{grid-template-columns:repeat(2,minmax(0,1fr))}}
     @media(max-width:530px){.screens-gallery{grid-template-columns:1fr}.screen-card{padding:16px}.screen-shot{height:340px;max-width:245px}.screens-dialog{padding:48px 12px 12px}}
     @media(max-width:950px){.tech-grid{grid-template-columns:1fr}}
@@ -79,7 +108,7 @@
 <body>
   <header class="nav"><div class="container nav-inner">
     <a class="brand" href="#top" aria-label="AML & KYC Scanner, в начало"><span class="brand-symbol">✧</span> AML <span style="color:var(--mint)">&amp;</span> KYC Scanner</a>
-    <nav class="nav-links" aria-label="Разделы сайта"><a href="#capabilities">Возможности</a><a href="#screening">Скрининг</a><a href="#screenshots">Экраны</a><a href="#workflow">Как работает</a><a href="#technology">Технологии</a><a href="#principles">Принципы</a></nav>
+    <nav class="nav-links" aria-label="Разделы сайта"><a href="#capabilities">Возможности</a><a href="#screening">Скрининг</a><a href="#ai-intelligence">AI Analyst</a><a href="#screenshots">Экраны</a><a href="#workflow">Как работает</a><a href="#technology">Технологии</a><a href="#principles">Принципы</a></nav>
     <span class="nav-tag">PERSONAL R&amp;D PROJECT</span>
   </div></header>
   <main>
@@ -87,9 +116,9 @@
       <div>
         <span class="eyebrow"><span class="dot"></span> AML INTELLIGENCE · TELEGRAM</span>
         <h1>Важное —<br><span class="gradient">в поле зрения.</span></h1>
-        <p class="hero-desc">Новости ПОД/ФТ, регуляторные изменения, сведения о компаниях и <strong>Adverse Media Screening ЮЛ, ИП и ФЛ</strong> — в едином Telegram-инструменте.</p>
+        <p class="hero-desc">Новости ПОД/ФТ, регуляторные изменения, сведения о компаниях и <strong>Adverse Media Screening ЮЛ, ИП и ФЛ</strong> — в едином Telegram-инструменте. <strong>AI Intelligence Analyst</strong> помогает разбирать найденные сюжеты по цитатам и источникам.</p>
         <div class="actions"><a class="btn btn-primary" href="#capabilities">Изучить возможности <span aria-hidden="true">↗</span></a><a class="btn btn-secondary" href="#workflow">Как это работает ↓</a></div>
-        <div class="hero-meta"><span>Четыре модуля</span><span>Скрининг ЮЛ · ИП · ФЛ</span><span>Human-in-the-loop</span></div>
+        <div class="hero-meta"><span>4 модуля + AI Analyst</span><span>Скрининг ЮЛ · ИП · ФЛ</span><span>Human-in-the-loop</span></div>
       </div>
       <div class="display" aria-label="Иллюстративный макет интерфейса Telegram">
         <div class="display-head"><span class="lights"><i></i><i></i><i></i></span><span>TELEGRAM · COMPANY PROFILE</span><span>⋯</span></div>
@@ -110,7 +139,7 @@
       <div><strong>04</strong><span>Взаимосвязанных модуля</span></div>
       <div><strong>09:00</strong><span>Ежедневный AML-дайджест · МСК</span></div>
       <div><strong>09:15</strong><span>Regulation Watch · МСК</span></div>
-      <div><strong>β</strong><span>Проверка компаний · закрытое тестирование</span></div>
+      <div><strong>AI</strong><span>Evidence First · закрытая beta</span></div>
     </div></div>
 
     <section class="section" id="capabilities"><div class="container">
@@ -145,13 +174,46 @@
       <p class="tech-caveat">⚠️ Поиск ФЛ/ИП не подтверждает личность, статус ИП или причастность к событию. Однофамильцы и ложные совпадения возможны. Проверка ЕГРИП, паспортных и других идентификаторов не выполняется. Обработка данных клиентов банка в этом внешнем контуре не разрешена.</p>
     </div></section>
 
+    <section class="section ai-intelligence" id="ai-intelligence"><div class="container ai-layout">
+      <div>
+        <span class="ai-overline">✦ AI INTELLIGENCE ANALYST · 1.1.1 BETA</span>
+        <h2>Не просто пересказ.<br><span style="color:var(--mint)">Объяснимая аналитика.</span></h2>
+        <p class="section-lead">Дополнительный AI-слой Adverse Media Scanner: модель GPT-OSS 120B через Groq помогает предварительно интерпретировать до трёх новостных сюжетов. Приоритет — проверяемость формулировок, а не длина отчёта.</p>
+        <div class="ai-value">
+          <div class="ai-value-item"><span class="ai-value-icon" aria-hidden="true">▤</span><div><strong>Entity Resolution + возможная роль</strong><p>Локальные эвристики различают совпадение названия и идентификацию лица, а также осторожно отмечают возможные роли участников.</p></div></div>
+          <div class="ai-value-item"><span class="ai-value-icon" aria-hidden="true">❝</span><div><strong>Evidence Anchoring</strong><p>Интерпретация AI сопровождается точной цитатой RSS-заголовка. Если цитата не найдена или выявлен неподтверждённый процессуальный статус, вывод скрывается.</p></div></div>
+          <div class="ai-value-item"><span class="ai-value-icon" aria-hidden="true">↗</span><div><strong>Source Traceability</strong><p>Ссылки на СМИ берутся из собранного RSS, а не создаются моделью. Отдельные материалы официальных органов не выдаются за подтверждение всех утверждений СМИ.</p></div></div>
+        </div>
+        <div class="ai-meta"><span>Groq API</span><span>openai/gpt-oss-120b</span><span>По запросу</span><span>Human review</span></div>
+      </div>
+      <div>
+        <div class="ai-preview" aria-label="Иллюстративный пример структуры Evidence First отчёта">
+          <div class="ai-preview-top">
+            <div class="ai-preview-brand">🤖 AI Intelligence Analyst<span class="ai-preview-sub">Evidence First · публичные заголовки RSS · GPT-OSS 120B</span></div>
+            <span class="ai-preview-state">1.1.1 · BETA</span>
+          </div>
+          <div class="ai-report">
+            <div class="ai-report-head"><span>01 / ПРЕДВАРИТЕЛЬНЫЙ СЮЖЕТ</span><span>PUBLIC RSS</span></div>
+            <h3>Судебное событие в открытой публикации</h3>
+            <p class="ai-report-row"><b>ENTITY MATCH</b><br>Совпадение названия — юридическое лицо не идентифицировано</p>
+            <p class="ai-report-row"><b>ROLE ASSESSMENT</b><br>Роль проверяемого лица по заголовку не установлена</p>
+            <div class="ai-quote">«Суд рассмотрел дело в отношении представителя организации»</div>
+            <p class="ai-report-row"><b>AI OBSERVATION</b><br>Упомянуто судебное событие; связь с конкретным юридическим лицом требует проверки.</p>
+            <div class="ai-guard">⚠️ Неопределённость: не установлены идентичность организации, процессуальная роль и обстоятельства дела.</div>
+            <span class="ai-report-link">↗ Ссылка на публикацию из Google News RSS</span>
+          </div>
+          <p class="ai-preview-note">Концептуальный макет с вымышленным заголовком, не реальный результат поиска. AI не читает полные статьи и не подтверждает факты, виновность или KYC/AML-рейтинг. Использование публичных внешних API не допускает передачу банковской тайны и сведений клиентов без согласований.</p>
+        </div>
+      </div>
+    </div></section>
+
     <section class="section how" id="workflow"><div class="container">
       <div class="kicker">COMPANY INTELLIGENCE</div><h2>Один запрос. Связанные инструменты.</h2><p class="section-lead">Сценарий для публичной компании через DaData. Для ФЛ и ИП доступен отдельный поиск публикаций по ФИО — без регистрационной карточки и проверки личности.</p>
       <div class="steps">
         <div class="step"><div class="step-num">01 — SEARCH</div><h3>Название или ИНН</h3><p>Найти организацию и выбрать нужное юридическое лицо среди совпадений.</p></div>
         <div class="step"><div class="step-num">02 — PROFILE</div><h3>Карточка компании</h3><p>Получить структурированные регистрационные данные из DaData.</p></div>
         <div class="step"><div class="step-num">03 — SCREEN</div><h3>Adverse Media</h3><p>Запустить поиск потенциально значимых публикаций по названию компании.</p></div>
-        <div class="step"><div class="step-num">04 — REVIEW</div><h3>Экспертная оценка</h3><p>Проверить первоисточники, идентичность ЮЛ или человека, роль и актуальность события.</p></div>
+        <div class="step"><div class="step-num">04 — REVIEW</div><h3>AI Evidence → эксперт</h3><p>По желанию получить AI-анализ трёх сюжетов по цитатам RSS, затем вручную проверить публикации, тождество лица, роль и актуальность события.</p></div>
       </div>
     </div></section>
 
@@ -206,13 +268,13 @@
       <h2>Технологии, которые<br>работают на результат.</h2>
       <p class="section-lead">Асинхронный Python-сервис объединяет Telegram-интерфейс, мониторинг открытых источников, карточки компаний и Adverse Media Screening ЮЛ, ИП и ФЛ.</p>
       <div class="tech-tags" aria-label="Технологический стек">
-        <span>Python 3</span><span>aiogram</span><span>httpx</span><span>BeautifulSoup</span><span>feedparser</span><span>SQLite</span><span>APScheduler</span><span>DaData API</span><span>systemd</span>
+        <span>Python 3</span><span>Groq API · GPT-OSS 120B</span><span>aiogram</span><span>httpx</span><span>BeautifulSoup</span><span>feedparser</span><span>SQLite</span><span>APScheduler</span><span>DaData API</span><span>systemd</span>
       </div>
       <div class="tech-grid">
         <div class="tech-panel">
           <div class="tech-overline">ARCHITECTURE / DATA FLOW</div>
           <h3>От источников к аналитике</h3>
-          <p class="tech-intro">Два контура: регулярный мониторинг и поиск информации по запросу.</p>
+          <p class="tech-intro">Два контура: регулярный мониторинг и поиск информации по запросу; дополнительный AI-разбор запускается вручную после скрининга.</p>
           <div class="tech-inputs">
             <div class="tech-node"><small>MONITORING</small><b>Росфинмониторинг · Банк России · ЕАГ · FATF</b><p>Новости, документы, страницы и RSS</p></div>
             <div class="tech-node"><small>ON-DEMAND LOOKUP</small><b>DaData API · Google News RSS</b><p>Профили ЮЛ и поиск публикаций по названиям / ФИО</p></div>
@@ -228,6 +290,7 @@
             <div class="tech-node"><small>TEMPORARY STATE</small><b>FSM / оперативная память</b><p>Выбор ЮЛ / поиск ФИО, навигация и временные результаты</p></div>
           </div>
           <div class="tech-arrow-center" aria-hidden="true">↓</div>
+          <div class="tech-node" style="margin-bottom:11px;border-color:#62ddc75e"><small>OPTIONAL AI / EVIDENCE FIRST</small><b>Groq · GPT-OSS 120B → локальная проверка цитат</b><p>До 3 публичных сюжетов по кнопке · ссылки из RSS · запрет неподтверждённых статусов</p></div>
           <div class="tech-end"><div class="tech-end-icon" aria-hidden="true">◇</div><div><b>Telegram Bot API · aiogram</b><p>Дайджесты, уведомления, карточки и интерактивные результаты</p></div></div>
         </div>
         <div class="tech-panel">
@@ -240,6 +303,7 @@
             <div class="tech-layer"><span class="tech-layer-icon" aria-hidden="true">▤</span><div><b>SQLite</b><p>Локальное хранение публикаций, дедупликация, история регуляторных событий.</p></div></div>
             <div class="tech-layer"><span class="tech-layer-icon" aria-hidden="true">◷</span><div><b>APScheduler · pytz</b><p>Автоматические проверки по Москве: AML Daily Digest в 09:00 и Regulation Watch в 09:15.</p></div></div>
             <div class="tech-layer"><span class="tech-layer-icon" aria-hidden="true">⌕</span><div><b>DaData REST API · Google News RSS</b><p>DaData — профили ЮЛ и ОКВЭД 2; Google News RSS — предварительный поиск публикаций о ЮЛ, ИП и ФЛ.</p></div></div>
+            <div class="tech-layer"><span class="tech-layer-icon" aria-hidden="true">✦</span><div><b>Groq API · AI Evidence Guardrails</b><p>GPT-OSS 120B разбирает публичные заголовки по запросу; локальный код контролирует цитаты, ссылки на СМИ и предварительные метки ролей.</p></div></div>
             <div class="tech-layer"><span class="tech-layer-icon" aria-hidden="true">⛨</span><div><b>Linux VPS · systemd · GitHub</b><p>Постоянная работа Python-процесса под systemd, контроль обновлений через Git.</p></div></div>
           </div>
         </div>
@@ -249,7 +313,7 @@
         <div class="tech-guardrail"><b>🔎 Объяснимая обработка</b><p>Поиск по названиям и ФИО, тематическая оценка и группировка используют правила и эвристики; совпадения не подтверждают личность и не являются AI-решением.</p></div>
         <div class="tech-guardrail"><b>🔐 Закрытая beta</b><p>Company Profile (только ЮЛ) и Adverse Media (ЮЛ, ИП, ФЛ) тестируются владельцем; ввод банковских клиентских данных не допускается.</p></div>
       </div>
-      <p class="tech-caveat">Архитектура показана на концептуальном уровне. Публичный сайт не предоставляет доступ к исходному коду, внутренней инфраструктуре или API-ключам.</p>
+      <p class="tech-caveat">Архитектура показана на концептуальном уровне. AI Intelligence Analyst 1.1.1 прошёл пилотные проверки, но точность ролей и сопоставления объектов на контрольной выборке пока не валидирована. Публичный сайт не предоставляет доступ к боту, приватному коду, инфраструктуре или API-ключам.</p>
     </div></section>
 
     <section class="section" id="principles"><div class="container deep-grid">
@@ -263,7 +327,7 @@
     </div></section>
     <section class="section" style="padding-top:0"><div class="container"><div class="quote"><div><div class="kicker">О ПРОЕКТЕ</div><h3>Интеллектуальная автоматизация начинается не с принятия решений, а с качественно собранной информации.</h3><p>AML &amp; KYC Scanner — независимый персональный R&amp;D-проект. Публичная страница носит презентационный характер: здесь нельзя проводить проверки. Работа с данными реальных банковских клиентов во внешних сервисах требует отдельных согласований. Совпадение по ФИО не подтверждает личность, статус ИП или причастность к событию; сведения из медиа и агрегаторов не являются доказательством нарушений.</p></div><div class="quote-logo" aria-hidden="true">✧</div></div></div></section>
   </main>
-  <footer><div class="container footer-inner"><span>© AML &amp; KYC Scanner · Personal R&amp;D · 2026</span><span>Python · Telegram · DaData · Open Sources</span><a href="#top">Наверх ↑</a></div></footer>
+  <footer><div class="container footer-inner"><span>© AML &amp; KYC Scanner · Personal R&amp;D · 2026</span><span>Python · Telegram · DaData · Groq AI · Open Sources</span><a href="#top">Наверх ↑</a></div></footer>
   <script>
     (() => {
       const dialog = document.getElementById('screen-viewer');
